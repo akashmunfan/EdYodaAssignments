@@ -1,1 +1,6 @@
+In this we first see the Application Deployment on the Port.
+As we can see the Application port is not accessible as hosted on port 8000. 
+After examning we see we used replicaset to deploy it.
+As the node port is not accessible we can say that the port has the issue to resolve it we can try the alternative method.
+Method 1
 
