@@ -45,6 +45,16 @@ pod "db-b54cd94f4-stfcc" deleted
 [root@ip-172-31-16-74 k8s-specifications]#
 [root@ip-172-31-16-74 k8s-specifications]#
 
+#NEW PODS CREATED
+
+[root@ip-172-31-16-74 k8s-specifications]# kubectl get po
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-4xz9w        2/2     Running   0          86s
+redis-868d64d78-s6xcb     2/2     Running   0          6m16s
+result-5d57b59f4b-d28pc   2/2     Running   0          6m16s
+vote-94849dc97-lr8bd      2/2     Running   0          2m36s
+worker-dd46d7584-zpcw5    2/2     Running   1          114s
+[root@ip-172-31-16-74 k8s-specifications]#
 
 
 
