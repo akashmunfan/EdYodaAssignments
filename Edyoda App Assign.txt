@@ -24,4 +24,33 @@ redis        ClusterIP   10.103.209.172   <none>        6379/TCP         5m52s
 result       NodePort    10.104.84.139    <none>        5001:32001/TCP   5m51s
 vote         NodePort    10.100.229.92    <none>        5000:32000/TCP   5m51s
 [root@ip-172-31-16-74 k8s-specifications]# c
+[root@ip-172-31-16-74 k8s-specifications]# kubectl get po
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-stfcc        2/2     Running   0          3m18s
+redis-868d64d78-s6xcb     2/2     Running   0          3m18s
+result-5d57b59f4b-d28pc   2/2     Running   0          3m18s
+vote-94849dc97-lsx5x      2/2     Running   0          3m18s
+worker-dd46d7584-xbg22    2/2     Running   0          3m18s
+[root@ip-172-31-16-74 k8s-specifications]# kubectl delete po vote-94849dc97-lsx5x
+pod "vote-94849dc97-lsx5x" deleted
+
+[root@ip-172-31-16-74 k8s-specifications]#
+[root@ip-172-31-16-74 k8s-specifications]# kubectl delete po worker-dd46d7584-xbg22
+pod "worker-dd46d7584-xbg22" deleted
+
+[root@ip-172-31-16-74 k8s-specifications]#
+[root@ip-172-31-16-74 k8s-specifications]# kubectl delete po db-b54cd94f4-stfcc
+pod "db-b54cd94f4-stfcc" deleted
+
+[root@ip-172-31-16-74 k8s-specifications]#
+[root@ip-172-31-16-74 k8s-specifications]#
+
+
+
+
+So When the voting pod is deleted it does not affect the Site an new pod is created automatically.
+when the worker pod is deleted it does not affect too and a new pod is generated .
+but when we delete db pod the new pod is created but the data of selections is deleted and now new data will be captured.
+
+
 
